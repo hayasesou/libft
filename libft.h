@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 12:44:41 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/21 14:30:34 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/05/21 17:32:39 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ size_t	ft_strlen(char *s);
 void	*ft_memset(void *s, int c, size_t n);
 void ft_bzero	(void *s,size_t n);
 void *ft_memcpy(void *dst, const void *src, size_t n);
+void *ft_memmove(void *dst, const void *src, size_t len);	
 
 #endif
