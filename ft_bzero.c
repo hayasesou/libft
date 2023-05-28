@@ -10,22 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h> 
+#include <stddef.h>
 
-void ft_bzero	(void *s,size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	char	*z;
-	unsigned int		i;
+	char			*z;
+	unsigned int	i;
 
 	i = 0;
 	z = (char *)s;
 	while (i < n)
 	{
-		 z[i] = '\0';
-		 i++;
+		z[i] = '\0';
+		i++;
 	}
 }
-
 
 // #include <stdio.h>
 // #include <strings.h>

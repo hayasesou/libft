@@ -12,21 +12,21 @@
 
 #include <stddef.h>
 
-void  *ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char *dest_s;
-	char *src_s;
-	unsigned int i;
+	char			*dest_s;
+	char			*src_s;
+	unsigned int	i;
 
 	i = 0;
 	dest_s = (char *)dst;
 	src_s = (char *)src;
-	while(i < n)
+	while (i < n)
 	{
 		dest_s[i] = src_s[i];
 		i++;
 	}
-	return(dest_s);
+	return (dest_s);
 }
 
 // #include <stdio.h>
@@ -44,14 +44,14 @@ void  *ft_memcpy(void *dst, const void *src, size_t n)
 // 	printf("%s\n", dst_2);
 
 // 	puts("-----");
-	
+
 // 	ft_memcpy(dst, src, 5);
 // 	printf("%s\n", dst);
 // 	memcpy(dst_2, src_2, 5);
 // 	printf("%s\n", dst_2);
 
 // 	puts("-----");
-	
+
 // 	ft_memcpy(dst, src, 20);
 // 	printf("%s\n", dst);
 // 	memcpy(dst_2, src_2, 20);

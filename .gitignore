@@ -4,3 +4,4 @@ a.out
 *.code-workspace
 libft.a
 .DS_Store
+a.out.dSYM

@@ -14,8 +14,8 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int		i;
-	int		count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;

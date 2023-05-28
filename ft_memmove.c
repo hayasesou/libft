@@ -10,32 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
+#include <stddef.h>
 
 // difference between memcpy and memmove -> https://mogachan.net/clangmemcpy/
 
-void	*ft_memmove (void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	char	*src_p;
 	char	*dst_p;
 
 	src_p = (char *)src;
 	dst_p = (char *)dest;
-	if(src_p  < dst_p)
+	if (src_p < dst_p)
 	{
-	while (0 < len)
-	{
-		dst_p[len-1] = src_p[len-1];
-		len--;
-	}
+		while (0 < len)
+		{
+			dst_p[len - 1] = src_p[len - 1];
+			len--;
+		}
 	}
 	else
-		ft_memcpy(dst_p,src_p,len);
-	return(dest);
+		ft_memcpy(dst_p, src_p, len);
+	return (dest);
 }
-
-
 
 // #include <stdio.h>
 // #include <string.h>
@@ -50,9 +48,9 @@ void	*ft_memmove (void *dest, const void *src, size_t len)
 // 	printf("%s\n", dst);
 // 	memmove(dst_2 , src_2, len);
 // 	printf("%s\n", dst_2);
-	
+
 // 	puts("-----");
-	
+
 // 	len = 5;
 // 	ft_memmove(dst, src, len);
 // 	printf("%s\n", dst);
