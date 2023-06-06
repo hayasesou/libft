@@ -6,12 +6,14 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 14:25:11 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/28 18:33:25 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/06 13:55:00 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <stdio.h>
+
 
 int isDelimiter(char s, char d)
 {
@@ -73,10 +75,12 @@ void create2DArray(char **ret,char *s, char d)
 		while(s[i] &&isDelimiter(s[i],d))
 			i++;
 		if(s[i])
+		{
 			ret[j] = ft_substr(s,i,word_len(&s[i],d));
+			j++;
+		}
 		while(s[i] && !isDelimiter(s[i],d))
 			i++;
-		j++;
 	}
 	ret[j] = NULL;
 }
@@ -95,15 +99,32 @@ char	**ft_split(char const *s, char c)
 }
 
 
-// int main()
+
+
+// void	test(const char *str, int c)
 // {
-// 	char *s = "hello world";
-// 	char **ret = ft_split(s,' ');
+// 	printf("\n> str [%s] c [%c]\n", str, c);
+
+// 	char	**ret;
+
+// 	ret = ft_split(str, c);
+
 // 	int i = 0;
 // 	while(ret[i])
 // 	{
 // 		printf("%s\n",ret[i]);
 // 		i++;
 // 	}
-// 	return (0);
 // }
+
+// int		main()
+// {
+// 	test("hello world", ' '); //normal 
+// 	test("   hello world", ' '); //front
+// 	test("hello world  ", ' ');//rear
+// 	test("         ", ' '); //allDelimniter
+// 	test(" ",'\0');
+// 	test("hello	world",'\0'); //tab
+// 	test("hello																																		world",'\0'); //long
+// }
+

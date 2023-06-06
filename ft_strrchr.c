@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 04:59:06 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/27 05:48:07 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/06 18:14:55 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_strrchr(const char *s, int c)
 			last_p = s_p;
 		s_p++;
 	}
+	if(c == 0)
+		return(s_p);
 	if (last_p == NULL)
 		return (NULL);
 	if (*s_p == letter)
