@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 02:07:54 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/10 03:25:00 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/10 04:18:12 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,18 @@ int ft_lstsize(t_list *lst)
 	return count;
 }
 
-// void	list_display(t_list *lst)
-// {
-// 	int		count = 0;
+void	list_display(t_list *lst)
+{
+	int		count = 0;
 
-// 	while (lst)
-// 	{
-// 		count++;
-// 		printf("%s\n",lst ->content);
-// 		lst = lst->next;
-// 	}
-// 	printf("size: %d\n", count);
-// }
+	while (lst)
+	{
+		count++;
+		printf("%s\n",lst ->content);
+		lst = lst->next;
+	}
+	printf("size: %d\n", count);
+}
 
 // void	test_1()
 // {
