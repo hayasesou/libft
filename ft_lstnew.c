@@ -12,16 +12,16 @@
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*list;
-	
+
 	list = (t_list *)malloc(sizeof(t_list));
-	if(list == NULL)
-		return(NULL);
+	if (list == NULL)
+		return (NULL);
 	list->content = content;
 	list->next = NULL;
-	return(list);
+	return (list);
 }
 
 // void test(char *content)
@@ -31,11 +31,11 @@ t_list *ft_lstnew(void *content)
 // }
 
 // int main ()
-// {	
+// {
 // 	test("hello");
 // 	test(NULL);
 // 	test("hello world");
 // 	test("");
 // 	test("\n");
-// 	return 0; 
+// 	return (0);
 // }

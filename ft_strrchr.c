@@ -6,12 +6,11 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 04:59:06 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/06 18:14:55 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/12 02:27:24 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -28,13 +27,11 @@ char	*ft_strrchr(const char *s, int c)
 			last_p = s_p;
 		s_p++;
 	}
-	if(c == 0)
-		return(s_p);
-	if (last_p == NULL)
-		return (NULL);
 	if (*s_p == letter)
 		return (s_p);
-	if (*last_p == letter)
+	if (last_p == NULL)
+		return (NULL);
+	if (*last_p != NULL)
 		return (last_p);
 	return (NULL);
 }
@@ -42,9 +39,9 @@ char	*ft_strrchr(const char *s, int c)
 // #include <string.h>
 // int main()
 // {
-// 	// char *s = "libft-test-tokyo";
-// 	// char *p = strrchr(s, 'l'+256);
-// 	// printf("%s",p);
+// 	char *s = "libft-test-tokyo";
+// 	char *p = strrchr(s, 364);
+// 	printf("%s",p);
 // 	printf("%c",'i' -256);
 // 	return(0);
 // }

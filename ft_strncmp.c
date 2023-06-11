@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 08:16:32 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/27 12:49:27 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/10 13:53:33 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	while (i < n && (str1[i] != '\0' || str1[i] != '\0'))
+	while (i < n && (str1[i] != '\0' || str2[i] != '\0'))
 	{
 		j = (int)str1[i] - (int)str2[i];
 		if (j > 0)
@@ -35,6 +35,16 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (j);
 }
+
+/*
+int	main(void)
+{
+	char	*cmp2 = calloc(10, 1);
+
+	int ret = ft_strncmp(cmp2, "abcd", 10);
+
+	printf("%d\n", ret);
+}*/
 
 // #include <stdio.h>
 // #include <string.h>

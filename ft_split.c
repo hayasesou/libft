@@ -6,41 +6,38 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 14:25:11 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/06 13:55:00 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/12 01:14:05 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdio.h>
 
-
-int isDelimiter(char s, char d)
+static int	is_delimiter(char s, char d)
 {
 	if (s == d)
 		return (1);
 	return (0);
 }
 
-int  countStrings(char *s,char d)
+static int	count_strings(char *s, char d)
 {
-	int count;
-	int i;
+	int	count;
+	int	i;
 
 	i = 0;
-	i =0;
+	i = 0;
 	count = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
-		if(isDelimiter(s[i],d) )
+		if (is_delimiter(s[i], d))
 			i++;
 		else
 		{
 			count++;
-			while(!isDelimiter(s[i],d))
+			while (!is_delimiter(s[i], d))
 			{
-				if(s[i] == '\0')
-					break;
+				if (s[i] == '\0')
+					break ;
 				i++;
 			}
 		}
@@ -48,14 +45,14 @@ int  countStrings(char *s,char d)
 	return (count);
 }
 
-int word_len(char *s, char d)
+static int	word_len(char *s, char d)
 {
-	int len;
-	int i;
+	int	len;
+	int	i;
 
 	i = 0;
 	len = 0;
-	while(!isDelimiter(s[i],d) &&s[i] != '\0')
+	while (!is_delimiter(s[i], d) && s[i] != '\0')
 	{
 		len++;
 		i++;
@@ -63,68 +60,71 @@ int word_len(char *s, char d)
 	return (len);
 }
 
-void create2DArray(char **ret,char *s, char d)
+static char	**create2darray(char **ret, char *s, char d)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
-	j = 0 ;
-	while(s[i] != '\0')
+	j = 0;
+	while (s[i] != '\0')
 	{
-		while(s[i] &&isDelimiter(s[i],d))
+		while (s[i] && is_delimiter(s[i], d))
 			i++;
-		if(s[i])
+		if (s[i])
 		{
-			ret[j] = ft_substr(s,i,word_len(&s[i],d));
+			ret[j] = ft_substr(s, i, word_len(&s[i], d));
+			if (ret[j] == NULL)
+				return (NULL);
 			j++;
 		}
-		while(s[i] && !isDelimiter(s[i],d))
+		while (s[i] && !is_delimiter(s[i], d))
 			i++;
 	}
 	ret[j] = NULL;
+	return (ret);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char **ret;
-	int i;
+	char	**ret;
+	int		i;
 
-	ret = (char **)malloc(sizeof(char *) * (countStrings((char *)s, c) + 1));
-	if(ret == NULL)
+	if (s == NULL)
 		return (NULL);
-	i =0 ;
-	create2DArray(ret,(char *)s,c);
+	ret = (char **)malloc(sizeof(char *) * (count_strings((char *)s, c) + 1));
+	if (ret == NULL)
+		return (NULL);
+	i = 0;
+	ret = create2darray(ret, (char *)s, c);
 	return (ret);
 }
 
+/*
+void	test(const char *str, int c)
+{
+	printf("\n> str [%s] c [%c]\n", str, c);
 
+	char	**ret;
 
+	ret = ft_split(str, c);
 
-// void	test(const char *str, int c)
-// {
-// 	printf("\n> str [%s] c [%c]\n", str, c);
+	int i = 0;
+	while(ret[i])
+	{
+		printf("%s\n",ret[i]);
+		i++;
+	}
+}
+int		main(void)
+{
+	// test("hello world", ' '); //normal
+	// test("   hello world", ' '); //front
+	// test("hello world  ", ' ');//rear
+	// test("         ", ' '); //allDelimniter
+	// test(" ",'\0');
+	// test("hello	world",'\0'); //tab
+	// test("hello											world",'\0');
+	test("123456789012345678901234567890", 1);
 
-// 	char	**ret;
-
-// 	ret = ft_split(str, c);
-
-// 	int i = 0;
-// 	while(ret[i])
-// 	{
-// 		printf("%s\n",ret[i]);
-// 		i++;
-// 	}
-// }
-
-// int		main()
-// {
-// 	test("hello world", ' '); //normal 
-// 	test("   hello world", ' '); //front
-// 	test("hello world  ", ' ');//rear
-// 	test("         ", ' '); //allDelimniter
-// 	test(" ",'\0');
-// 	test("hello	world",'\0'); //tab
-// 	test("hello																																		world",'\0'); //long
-// }
-
+}*/

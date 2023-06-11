@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 02:49:10 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/28 14:32:33 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/10 16:53:25 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*str;
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
+	if (ft_strlen(s) - start < len)
+		len = ft_strlen(s) - start;
+	if (ft_strlen(s) < start)
+		len = 0;
 	str = (char *)malloc(len + 1);
 	if (str == NULL)
 		return (NULL);
-	if (start > ft_strlen(s))
+	if (start < ft_strlen(s))
 	{
-		str[0] = '\0';
-		return (str);
-	}
-	while (s[i + start] != '\0' && i < len)
-	{
-		str[i] = s[i + start];
-		i++;
+		while (s[i + start] != '\0' && i < len)
+		{
+			str[i] = s[i + start];
+			i++;
+		}
 	}
 	str[i] = '\0';
 	return (str);
@@ -60,9 +64,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // {
 // 	test("libft-test-tokyo", 0, 100);
 // }
-// [test 5] ASSERT_EQ_STR failed: ("s/test_ft_substr.c") is not 
+// [test 5] ASSERT_EQ_STR failed: ("s/test_ft_substr.c") is not
 //equal to expected (""). func main at file srcs/test_ft_substr.c,
-	// line 22
+// line 22
 // [test 10] ASSERT_EQ_STR failed: ("s/tes") is not equal to expected
 // (""). func main at file srcs/test_ft_substr.c,
-	// line 27
+// line 27

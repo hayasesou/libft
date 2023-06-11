@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 01:10:12 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/28 02:28:42 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/10 15:58:48 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s1)
 	size_t	i;
 
 	i = 0;
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + sizeof(char)));
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (str == NULL)
 		return (NULL);
 	while (s1[i] != '\0')
@@ -43,4 +43,5 @@ char	*ft_strdup(const char *s1)
 // 	printf("ft :%s \nori :%s",actual,expected);
 // 	free(actual);
 // 	free(expected);
+// 	system("leaks a.out");
 //  }

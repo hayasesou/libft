@@ -6,16 +6,16 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 12:16:11 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/06 16:24:58 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/11 23:13:16 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-int countDigits(long n, int sign)
+static int	count_digits(long n, int sign)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (n == 0)
@@ -27,36 +27,36 @@ int countDigits(long n, int sign)
 	}
 	if (sign == -1)
 		count++;
-	return count;
+	return (count);
 }
 
-void allocation(char *ret, long n, int digit, int sign)
+static void	allocation(char *ret, long n, int digit, int sign)
 {
-	while (digit >=0)
+	while (digit >= 0)
 	{
 		ret[digit] = n % 10 + '0';
 		n = n / 10;
 		digit--;
 	}
 	if (sign == -1)
-		ret[digit+1] = '-';
+		ret[digit + 1] = '-';
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	int sign;
-	char *ret;
-	int digit;
-	long num;
+	int		sign;
+	char	*ret;
+	int		digit;
+	long	num;
 
-	num =(long)n;
+	num = (long)n;
 	sign = 1;
 	if (num < 0)
 	{
 		sign = -1;
 		num *= sign;
 	}
-	digit = countDigits(num, sign);
+	digit = count_digits(num, sign);
 	ret = (char *)malloc(sizeof(char) * (digit + 1));
 	if (ret == NULL)
 		return (NULL);
@@ -65,13 +65,15 @@ char *ft_itoa(int n)
 	return (ret);
 }
 
-#include <stdio.h>
-void test(int n)
-{
+// #include <stdio.h>
 
-	char *str = ft_itoa(n);
-	printf("\n n = [%d]     str = [%s]\n", n, str);
-}
+// void	test(int n)
+// {
+// 	char	*str;
+
+// 	str = ft_itoa(n);
+// 	printf("\n n = [%d]     str = [%s]\n", n, str);
+// }
 
 // int main()
 // {
