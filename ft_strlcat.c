@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 21:08:59 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/27 03:36:16 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/12 08:54:36 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <string.h>
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	dst_len;

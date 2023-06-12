@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 14:25:11 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/12 01:14:05 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/12 09:32:13 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static int	word_len(char *s, char d)
 	return (len);
 }
 
-static char	**create2darray(char **ret, char *s, char d)
+static char	**create2darray(char **ret, char *s, char d, int count)
 {
 	int	i;
 	int	j;
@@ -75,7 +75,11 @@ static char	**create2darray(char **ret, char *s, char d)
 		{
 			ret[j] = ft_substr(s, i, word_len(&s[i], d));
 			if (ret[j] == NULL)
+			{
+				while (count-- >= 0)
+					free(ret[count]);
 				return (NULL);
+			}
 			j++;
 		}
 		while (s[i] && !is_delimiter(s[i], d))
@@ -89,42 +93,41 @@ char	**ft_split(char const *s, char c)
 {
 	char	**ret;
 	int		i;
+	int		count;
 
 	if (s == NULL)
 		return (NULL);
-	ret = (char **)malloc(sizeof(char *) * (count_strings((char *)s, c) + 1));
+	count = count_strings((char *)s, c) + 1;
+	ret = (char **)malloc(sizeof(char *) * (count));
 	if (ret == NULL)
 		return (NULL);
 	i = 0;
-	ret = create2darray(ret, (char *)s, c);
+	ret = create2darray(ret, (char *)s, c, count);
 	return (ret);
 }
 
-/*
-void	test(const char *str, int c)
-{
-	printf("\n> str [%s] c [%c]\n", str, c);
+// void	test(const char *str, int c)
+// {
+// 	char	**ret;
+// 	int		i;
 
-	char	**ret;
-
-	ret = ft_split(str, c);
-
-	int i = 0;
-	while(ret[i])
-	{
-		printf("%s\n",ret[i]);
-		i++;
-	}
-}
-int		main(void)
-{
-	// test("hello world", ' '); //normal
-	// test("   hello world", ' '); //front
-	// test("hello world  ", ' ');//rear
-	// test("         ", ' '); //allDelimniter
-	// test(" ",'\0');
-	// test("hello	world",'\0'); //tab
-	// test("hello											world",'\0');
-	test("123456789012345678901234567890", 1);
-
-}*/
+// 	printf("\n> str [%s] c [%c]\n", str, c);
+// 	ret = ft_split(str, c);
+// 	i = 0;
+// 	while (ret[i])
+// 	{
+// 		printf("%s\n", ret[i]);
+// 		i++;
+// 	}
+// }
+// int	main(void)
+// {
+// 	test("hello world", ' '); //normal
+// 								// test("   hello world", ' '); //front
+// 								// test("hello world  ", ' ');//rear
+// 								// test("         ", ' '); //allDelimniter
+// 								// test(" ",'\0');
+// 								// test("hello	world",'\0'); //tab
+// 								// test("hello											world",'\0');
+// 								// test("123456789012345678901234567890", 1);
+// }
