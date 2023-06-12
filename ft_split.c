@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 14:25:11 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/12 09:32:13 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/12 13:27:11 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ static char	**create2darray(char **ret, char *s, char d, int count)
 			{
 				while (count-- >= 0)
 					free(ret[count]);
+				free(ret);
 				return (NULL);
 			}
 			j++;
@@ -85,7 +86,6 @@ static char	**create2darray(char **ret, char *s, char d, int count)
 		while (s[i] && !is_delimiter(s[i], d))
 			i++;
 	}
-	ret[j] = NULL;
 	return (ret);
 }
 
@@ -98,7 +98,7 @@ char	**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	count = count_strings((char *)s, c) + 1;
-	ret = (char **)malloc(sizeof(char *) * (count));
+	ret = (char **)ft_calloc(count, sizeof(char *));
 	if (ret == NULL)
 		return (NULL);
 	i = 0;
@@ -128,6 +128,6 @@ char	**ft_split(char const *s, char c)
 // 								// test("         ", ' '); //allDelimniter
 // 								// test(" ",'\0');
 // 								// test("hello	world",'\0'); //tab
-// 								// test("hello											world",'\0');
+// 								// test("hello		world",'\0');
 // 								// test("123456789012345678901234567890", 1);
 // }
