@@ -6,12 +6,11 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 18:19:53 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/12 08:56:55 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/19 13:52:24 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 static int	handle_overflow(int sign, long *num, int digit);
 

@@ -6,12 +6,11 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 12:16:11 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/11 23:13:16 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/19 15:30:49 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static int	count_digits(long n, int sign)
 {

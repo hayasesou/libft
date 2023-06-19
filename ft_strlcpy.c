@@ -6,12 +6,11 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:07:15 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/26 20:17:48 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/19 11:21:25 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t destsize)
 {

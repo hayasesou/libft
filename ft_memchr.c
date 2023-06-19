@@ -6,13 +6,11 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 14:16:01 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/27 16:09:44 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/19 13:39:53 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdio.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

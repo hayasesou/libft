@@ -6,11 +6,11 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 04:29:13 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/21 10:14:35 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/19 10:51:25 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

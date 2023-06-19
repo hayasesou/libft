@@ -6,13 +6,11 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 10:15:35 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/12 01:41:15 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/19 14:49:24 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	front(char const *s1, char const *set)
 {

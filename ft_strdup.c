@@ -6,14 +6,11 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 01:10:12 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/10 15:58:48 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/19 14:15:28 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {

@@ -6,13 +6,11 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 02:49:10 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/10 16:53:25 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/19 14:40:45 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
