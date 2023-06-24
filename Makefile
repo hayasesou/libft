@@ -13,6 +13,10 @@ BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
+ifdef WITH_BONUS
+	OBJS += $(BONUS_OBJS)
+endif
+
 all : $(NAME)
 
 $(NAME) : $(OBJS)
@@ -29,5 +33,5 @@ fclean : clean
 
 re : fclean all
 
-bonus : $(OBJS) $(BONUS_OBJS)
-	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus : 
+	make WITH_BONUS=1
