@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 03:57:19 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/11 22:17:00 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 16:34:03 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	char	*s_p;
 	char	letter;
 
-	letter = '\0' + c;
+	letter = c;
 	s_p = (char *)s;
 	while (*s_p != '\0' && *s_p != letter)
 		s_p++;

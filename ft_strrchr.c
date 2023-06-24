@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 04:59:06 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/12 07:43:55 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 16:39:11 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char			*s_p;
-	char			*last_p;
-	unsigned char	letter;
+	char	*s_p;
+	char	*last_p;
+	char	letter;
 
 	s_p = (char *)s;
-	letter = '\0' + c;
+	letter = c;
 	last_p = NULL;
 	while (*s_p != '\0')
 	{
@@ -29,11 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (*s_p == letter)
 		return (s_p);
-	if (last_p == NULL)
-		return (NULL);
-	if (last_p != NULL)
-		return (last_p);
-	return (NULL);
+	return (last_p);
 }
 
 // #include <string.h>

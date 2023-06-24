@@ -6,18 +6,13 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 21:00:31 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/20 21:52:56 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 16:24:41 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	int	flag;
-
-	flag = 0;
-	if (c >= 0 && c <= 127)
-		flag = 1;
-	return (flag);
+	return (c >= 0 && c <= 127);
 }
 
 // #include <stdio.h>

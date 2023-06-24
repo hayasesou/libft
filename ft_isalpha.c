@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 19:59:24 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/20 21:46:28 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 16:20:20 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 int	ft_isalpha(int c)
 {
-	int	flag;
-
-	flag = 0;
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		flag = 1;
-	return (flag);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
 
 // #include <stdio.h>

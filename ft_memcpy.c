@@ -6,17 +6,17 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 10:33:16 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/10 15:21:33 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 15:38:39 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char			*dest_s;
-	char			*src_s;
-	unsigned int	i;
+	char	*dest_s;
+	char	*src_s;
+	size_t	i;
 
 	if (dst == NULL && src == NULL)
 		return (dst);

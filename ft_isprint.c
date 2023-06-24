@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 21:55:43 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/20 22:03:08 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 16:33:18 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	int	flag;
-
-	flag = 0;
-	if (c >= 32 && c <= 126)
-		flag = 1;
-	return (flag);
+	return (c >= 32 && c <= 126);
 }

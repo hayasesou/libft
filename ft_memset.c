@@ -6,24 +6,24 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 23:26:55 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/21 04:27:52 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 16:48:14 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*s_c;
-	unsigned int	j;
+	size_t			j;
 
 	j = 0;
 	s_c = (unsigned char *)s;
 	i = (unsigned int)c;
 	while (j < n)
 	{
-		s_c[j] = '\0' + i;
+		s_c[j] = i;
 		j++;
 	}
 	return (s_c);

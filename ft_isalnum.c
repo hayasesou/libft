@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 20:19:51 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/05/20 21:46:40 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 16:23:07 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	int	flag;
-
-	flag = 0;
-	if (ft_isalpha(c) || ft_isdigit(c))
-		flag = 1;
-	return (flag);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
 
 // #include <stdio.h>

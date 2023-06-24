@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 08:16:32 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/19 13:36:42 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 16:56:12 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (i < n && (str1[i] != '\0' || str2[i] != '\0'))
 	{
 		j = (int)str1[i] - (int)str2[i];
-		if (j > 0)
-			return (j);
-		else if (j < 0)
+		if (j != 0)
 			return (j);
 		i++;
 	}

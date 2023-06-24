@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 14:25:11 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/12 13:27:11 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 19:28:42 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@ static int	is_delimiter(char s, char d)
 	return (0);
 }
 
-static int	count_strings(char *s, char d)
+static size_t	count_strings(char *s, char d)
 {
-	int	count;
-	int	i;
+	size_t	count;
+	size_t	i;
 
-	i = 0;
 	i = 0;
 	count = 0;
 	while (s[i] != '\0')
@@ -45,10 +44,10 @@ static int	count_strings(char *s, char d)
 	return (count);
 }
 
-static int	word_len(char *s, char d)
+static size_t	word_len(char *s, char d)
 {
-	int	len;
-	int	i;
+	size_t	len;
+	size_t	i;
 
 	i = 0;
 	len = 0;
@@ -91,9 +90,9 @@ static char	**create2darray(char **ret, char *s, char d, int count)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ret;
-	int		i;
-	int		count;
+	char		**ret;
+	int			i;
+	size_t		count;
 
 	if (s == NULL)
 		return (NULL);

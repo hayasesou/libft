@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 20:13:53 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/11 23:01:18 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 16:21:06 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 int	ft_isdigit(int c)
 {
-	int	flag;
-
-	flag = 0;
-	if (c >= '0' && c <= '9')
-		flag = 1;
-	return (flag);
+	return (c >= '0' && c <= '9');
 }

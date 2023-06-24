@@ -6,7 +6,7 @@
 /*   By: hfukushi <hfukushi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:07:15 by hfukushi          #+#    #+#             */
-/*   Updated: 2023/06/19 11:21:25 by hfukushi         ###   ########.fr       */
+/*   Updated: 2023/06/24 16:41:19 by hfukushi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t destsize)
 {
-	unsigned int	i;
-	unsigned int	src_len;
+	size_t	i;
+	size_t	src_len;
 
 	i = 0;
 	src_len = ft_strlen(src);
